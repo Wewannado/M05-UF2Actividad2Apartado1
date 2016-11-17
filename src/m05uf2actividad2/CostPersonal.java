@@ -33,7 +33,7 @@ public class CostPersonal {
 
     /**
      * Metodo que retorna si un trabajador es directiu o no
-     * 
+     *
      * @param treballador el treballador que volem saber si es directiu o no
      * @return boolean true per a directius, false en cas contrari.
      */
@@ -43,17 +43,16 @@ public class CostPersonal {
 
     /**
      * Metode que calcula el sou d'un treballador donat
-     * 
+     *
      * @param treballador el treballador del que volem calcular el sou
      * @return float amb el sou del treballador
      */
     protected static float calculaSou(Treballador treballador) {
         float sou;
-        final int PREU_HORA_EXTRA=20;
-        if (esDirectiu(treballador)) {
-            sou = treballador.getNomina();
-        } else {
-            sou = treballador.getNomina() + (treballador.getHoresExtres() * PREU_HORA_EXTRA);
+        final int PREU_HORA_EXTRA = 20;
+        sou = treballador.getNomina();
+        if (!esDirectiu(treballador)) {
+            sou = sou + (treballador.getHoresExtres() * PREU_HORA_EXTRA);
         }
         return sou;
     }
