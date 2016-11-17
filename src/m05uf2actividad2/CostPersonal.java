@@ -18,7 +18,7 @@ public class CostPersonal {
      * @param treballadors Array con el grupo de trabajadores del que queremos
      * conocer el coste
      * @return float con el coste total de los trabajadores especificados
-     * @version 0.1
+     * @version 0.2
      * @since CostPersonal 0.1
      */
     protected static float CostDelPersonal(Treballador treballadors[]) {
@@ -36,6 +36,8 @@ public class CostPersonal {
      *
      * @param treballador el treballador que volem saber si es directiu o no
      * @return boolean true per a directius, false en cas contrari.
+     * @version 0.1
+     * @since CostPersonal 0.1
      */
     protected static boolean esDirectiu(Treballador treballador) {
         return treballador.getTipusTreballador() == Treballador.DIRECTOR || treballador.getTipusTreballador() == Treballador.SUBDIRECTOR;
@@ -46,6 +48,8 @@ public class CostPersonal {
      *
      * @param treballador el treballador del que volem calcular el sou
      * @return float amb el sou del treballador
+     * @version 0.2
+     * @since CostPersonal 0.1
      */
     protected static float calculaSou(Treballador treballador) {
         float sou;
